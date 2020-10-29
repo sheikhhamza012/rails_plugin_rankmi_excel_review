@@ -1,7 +1,3 @@
-Rails.application.routes.draw do
-    scope module: 'rankmi_excel_review' do
-        resources :hamza
-    
-    end
-
+RankmiExcelReview::Engine.routes.draw do
+    resources :hamza
 end
