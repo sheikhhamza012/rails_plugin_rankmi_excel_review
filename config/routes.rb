@@ -1,3 +1,3 @@
 RankmiExcelReview::Engine.routes.draw do
-    get '/hamza',to: 'hamza#index'
+    get '/hamza',to: 'hamzas#index'
 end
