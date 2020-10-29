@@ -1,5 +1,9 @@
 require "rankmi_excel_review/engine"
 
 module RankmiExcelReview
-  # Your code goes here...
+  class Main
+    def self.greet
+      puts "hello"
+    end
+  end
 end
