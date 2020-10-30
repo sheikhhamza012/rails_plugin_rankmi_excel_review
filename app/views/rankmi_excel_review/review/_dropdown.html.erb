@@ -1,0 +1,8 @@
+<%options=%w[identifier username email rut firstname middlename lastname mothername gender birthdate joiningdate subdomain area position manager_identifier fcompetences otro optional autoevaluation validator second_validator verifier]%>
+<select name="column_numbers[<%=locals[:column_number]%>]">
+    <option selected="selected"></option>
+    <%options.map do |o|%>
+        <option <%=selected(locals[:column],o)%>><%= o %></option>
+    <%end%>
+
+</select>

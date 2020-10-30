@@ -1,3 +1,4 @@
 RankmiExcelReview::Engine.routes.draw do
-    resources :hamza
+    resources :review , only:[:index, :create]
+    resources :test 
 end

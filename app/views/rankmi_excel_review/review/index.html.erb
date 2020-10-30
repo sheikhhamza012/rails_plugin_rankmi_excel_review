@@ -1,0 +1,54 @@
+<style>
+table,th,tr,tbody,td{
+    margin: 0px auto;
+    padding: 10px;
+    border:1px solid  white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+th,input[type="submit"]{
+    background-color: rgb(70,116,193);
+    color: white;
+}
+tr:nth-child(even){
+    background-color: rgb(207, 213, 233);
+}
+tr:nth-child(odd){
+    background-color: rgb(233, 235, 245);
+}
+input[type="submit"]{
+    padding:10px 20px;
+    border-radius: 10px;
+    border: none;
+    float: right;
+}
+.root{
+    margin:0px auto;
+    width: fit-content;
+
+}
+</style>
+<div class="root">
+    <%= form_with(url: review_index_path, method: "post") do %>
+        <%=hidden_field_tag :path_to_file,params[:path_to_file]%>
+        <%=hidden_field_tag :redirect_to,params[:redirect_to]%>
+        <table>
+            <tr>
+                <th>Encabezado Columna</th>
+                <th>Vista Preliminar</th>
+                <th>Propiedad de Rankmi</th>
+            </tr>
+            <%i=0%>
+            <%cells=@input_sheet[0].size%>
+            <%while i < cells%>
+                <tr>
+                    <td><%=@input_sheet[0][i]&.value%></td>
+                    <td><%=@input_sheet[1][i]&.value%></td>
+                    <td><%= render "dropdown" , locals:{ :column_number=>i,:column=>@input_sheet[0][i]&.value,  }%></td>
+                </tr>
+                <%i+=1%>
+            <%end%>
+        </table>
+        <%= submit_tag("Revisar Excel") %>
+    <%end%>
+</div>
