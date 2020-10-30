@@ -4,6 +4,7 @@ module RankmiExcelReview
         require 'byebug'
         def index
             # RankmiExcelReview::Main.greet
+            byebug
             @s=params.to_s
         end
     end
