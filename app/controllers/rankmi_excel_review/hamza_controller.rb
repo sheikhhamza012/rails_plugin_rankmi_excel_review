@@ -3,9 +3,8 @@ module RankmiExcelReview
         layout 'application'
         require 'byebug'
         def index
-            # RankmiExcelReview::Main.greet
-            byebug
-            @s=params.to_s
+            @input_file = RubyXL::Parser.parse(params[:path_to_file]) 
+            @s=@input_file[0][0][0]
         end
     end
 end
