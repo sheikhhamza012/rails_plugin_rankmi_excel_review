@@ -21,8 +21,6 @@ module RankmiExcelReview
                 file[row][col]&.change_contents("#{file[row][col]&.value}, #{val}") 
             end
 
-        rescue
-            byebug
         end
 
         # if a column exists return index else create it and return index
@@ -216,7 +214,9 @@ module RankmiExcelReview
                                 print_warning(@input_file[0],ind,rankmi_email_col,@input_file[1][found_row][index_of_rankmi_email]&.value)
                                 
                                 curr_email_col = find_col(@input_file[0],"email")
-                                if curr_email_col && @input_file[1][found_row][index_of_rankmi_email]&.value != @input_file[0][ind][curr_email_col]&.value
+                                
+                                if curr_email_col && @input_file[1][found_row][index_of_rankmi_email]&.value&.strip&.gsub(/\s+/, " ")&.gsub(/[^[:print:]]/,'')&.unicode_normalize(:nfd).gsub(/[\u0300-\u036F]/, '')&.downcase != @input_file[0][ind][curr_email_col]&.value&.strip&.gsub(/\s+/, " ")&.gsub(/[^[:print:]]/,'')&.unicode_normalize(:nfd).gsub(/[\u0300-\u036F]/, '')&.downcase
+                                    # byebug
                                     print_warning(@input_file[0],ind,comparison_col,"otro correo en Rankmi")
         
                                 end
@@ -226,7 +226,7 @@ module RankmiExcelReview
                                 print_warning(@input_file[0],ind,rankmi_username_col,@input_file[1][found_row][index_of_rankmi_username]&.value)
                                 
                                 curr_username_col = find_col(@input_file[0],"username")
-                                if curr_username_col && @input_file[1][found_row][index_of_rankmi_username]&.value != @input_file[0][ind][curr_username_col]&.value
+                                if curr_username_col && @input_file[1][found_row][index_of_rankmi_username]&.value&.strip&.gsub(/\s+/, " ")&.gsub(/[^[:print:]]/,'')&.downcase != @input_file[0][ind][curr_username_col]&.value&.strip&.gsub(/\s+/, " ")&.gsub(/[^[:print:]]/,'')&.downcase
                                     print_warning(@input_file[0],ind,comparison_col,"otro username en Rankmi")
         
                                 end
