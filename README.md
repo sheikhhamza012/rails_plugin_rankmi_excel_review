@@ -25,7 +25,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+- in config/routes add `mount RankmiExcelReview::Engine => "/rankmi_excel_review"`
+- in the controller where the gem is to be used redirect the request using `redirect_to RankmiExcelReview::Engine.routes.url_helpers.review_index_path(:path_to_file=>@path_to_file, :redirect_to=>'path to go after wirting changes')`
 
 ## Development
 
