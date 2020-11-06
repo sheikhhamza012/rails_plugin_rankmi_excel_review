@@ -105,10 +105,11 @@ module RankmiExcelReview
             rankmi_username_col = create_column_and_return_index(@input_file[0],"username en Rankmi")
             no_user_col = create_column_and_return_index(@input_file[0],"usuario nuevo")
             
+            puts "Writing to file..."
+            
             #for row
             @input_file[0].each_with_index do |row, ind|
                 i= 0
-                puts ind
                 
                 #for cell in row
                 while i<@input_file[0][0]&.size

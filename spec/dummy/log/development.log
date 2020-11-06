@@ -1,0 +1,259 @@
+Started GET "/" for ::1 at 2020-11-06 21:22:27 +0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.1ms | Allocations: 422)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 2209)
+
+
+Started GET "/" for ::1 at 2020-11-06 21:22:28 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.3ms | Allocations: 190)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 722)
+
+
+Started GET "/" for ::1 at 2020-11-06 21:22:31 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/" for ::1 at 2020-11-06 21:22:32 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/rankmi_excel_review/test/1" for ::1 at 2020-11-06 21:22:32 +0500
+Processing by RankmiExcelReview::TestController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/test/show.html.erb
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/test/show.html.erb (Duration: 0.3ms | Allocations: 78)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1920)
+
+
+Started GET "/rankmi_excel_review/test/1" for ::1 at 2020-11-06 21:22:36 +0500
+Processing by RankmiExcelReview::TestController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/test/show.html.erb
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/test/show.html.erb (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 307)
+
+
+Started GET "/rankmi_excel_review/test/" for ::1 at 2020-11-06 21:22:36 +0500
+Processing by RankmiExcelReview::TestController#index as HTML
+Redirected to http://localhost:3000/rankmi_excel_review/review?path_to_file=..%2F..%2Fexcel.xlsx&redirect_to=%2Frankmi_excel_review%2Ftest%2F1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 223)
+
+
+Started GET "/rankmi_excel_review/review?path_to_file=..%2F..%2Fexcel.xlsx&redirect_to=%2Frankmi_excel_review%2Ftest%2F1" for ::1 at 2020-11-06 21:22:36 +0500
+Processing by RankmiExcelReview::ReviewController#index as HTML
+  Parameters: {"path_to_file"=>"../../excel.xlsx", "redirect_to"=>"/rankmi_excel_review/test/1"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 163)
+
+
+  
+Zip::Error (XLSX file format error: File ../../excel.xlsx not found):
+  
+rubyzip (2.3.0) lib/zip/file.rb:106:in `initialize'
+rubyzip (2.3.0) lib/zip/file.rb:121:in `new'
+rubyzip (2.3.0) lib/zip/file.rb:121:in `open'
+rubyXL (3.4.16) lib/rubyXL/parser.rb:7:in `parse'
+/Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/controllers/rankmi_excel_review/review_controller.rb:11:in `index'
+actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.4) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.4) lib/rails/railtie.rb:190:in `method_missing'
+actionpack (6.0.3.4) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.0.3.4) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/rankmi_excel_review/test/" for ::1 at 2020-11-06 21:23:00 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RankmiExcelReview::TestController#index as HTML
+Redirected to http://localhost:3000/rankmi_excel_review/review?path_to_file=..%2F..%2Fexcel_files%2Fexcel.xlsx&redirect_to=%2Frankmi_excel_review%2Ftest%2F1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 654)
+
+
+Started GET "/rankmi_excel_review/review?path_to_file=..%2F..%2Fexcel_files%2Fexcel.xlsx&redirect_to=%2Frankmi_excel_review%2Ftest%2F1" for ::1 at 2020-11-06 21:23:00 +0500
+Processing by RankmiExcelReview::ReviewController#index as HTML
+  Parameters: {"path_to_file"=>"../../excel_files/excel.xlsx", "redirect_to"=>"/rankmi_excel_review/test/1"}
+  Rendering /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/index.html.erb within layouts/application
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.4ms | Allocations: 431)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 229)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 207)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/_dropdown.html.erb (Duration: 0.1ms | Allocations: 206)
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/review/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6814)
+Completed 200 OK in 1136ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 1758154)
+
+
+Started GET "/" for ::1 at 2020-11-06 21:30:59 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 660)
+
+
+Started GET "/" for ::1 at 2020-11-06 21:31:01 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/test_engine/hamza" for ::1 at 2020-11-06 21:31:01 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/test_engine/hamza"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/" for ::1 at 2020-11-06 21:31:02 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/rankmi_excel_review/test/1" for ::1 at 2020-11-06 21:31:03 +0500
+Processing by RankmiExcelReview::TestController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/test/show.html.erb
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/test/show.html.erb (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 493)
+
+
+Started GET "/rankmi_excel_review/test/1" for ::1 at 2020-11-06 21:55:42 +0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/rankmi_excel_review/test/1"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/rankmi_excel_review/test/" for ::1 at 2020-11-06 21:55:44 +0500
+Processing by RankmiExcelReview::TestController#index as HTML
+  Rendering /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/test/index.html.erb
+  Rendered /Users/sheikh/Desktop/work/rails/rankmi_excel_review/app/views/rankmi_excel_review/test/index.html.erb (Duration: 0.3ms | Allocations: 84)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 1941)
+
+
