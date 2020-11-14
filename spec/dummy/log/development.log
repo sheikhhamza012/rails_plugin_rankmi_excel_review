@@ -257,3 +257,10 @@ Processing by RankmiExcelReview::TestController#index as HTML
 Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 1941)
 
 
+Started GET "/" for ::1 at 2020-11-14 12:09:41 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sheikh/.rvm/gems/ruby-2.6.6/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sheikh/.rvm/gems/ruby-2.6.6/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
