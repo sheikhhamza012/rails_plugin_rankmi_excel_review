@@ -27,8 +27,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", "~> 5.2.0", ">= 5.2.0"
   spec.add_dependency "rubyXL"
+  spec.add_dependency "rspec-rails"
+  spec.add_dependency "capybara"
+  spec.add_dependency "byebug"
 
   spec.add_development_dependency "sqlite3"
-  spec.add_development_dependency "rspec-rails"
-  spec.add_development_dependency "capybara"
 end
