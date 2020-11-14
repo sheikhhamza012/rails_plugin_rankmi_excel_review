@@ -1,6 +1,7 @@
 module RankmiExcelReview
     class ReviewController < ApplicationController 
         require 'byebug'
+        require 'rubyXL'
         require 'rubyXL/convenience_methods/cell'
 
         layout 'application'
