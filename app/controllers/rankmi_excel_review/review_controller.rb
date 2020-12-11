@@ -344,7 +344,7 @@ module RankmiExcelReview
             # @BBDD_rankmi_file.write("En BBDD rankmi a agregar.xlsx")
             # @no_existe_BBDD_file.write("No existe en BBDD.xlsx")
 
-            redirect_to params[:redirect_to], :input_file_url=>input_file_url, :edited_input_file_url=>edited_input_file_url, :output_BBDD_rankmi_file_url=>output_BBDD_rankmi_file_url,:no_existe_BBDD_file=>no_existe_BBDD_file
+            redirect_to params[:redirect_to], :input_file_url=>input_file_url, :edited_input_file_url=>edited_input_file_url, :output_BBDD_rankmi_file_url=>output_BBDD_rankmi_file_url,:no_existe_BBDD_file_url=>no_existe_BBDD_file_url
         end
 
         #check which checkbox value should be selected
