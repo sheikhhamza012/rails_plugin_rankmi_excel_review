@@ -3,13 +3,14 @@ module RankmiExcelReview
         require 'byebug'
         require 'rubyXL'
         require 'rubyXL/convenience_methods/cell'
+        require 'open-uri'
 
         layout 'application'
         helper_method :selected
         
         # action to show the table (form) for review
         def index
-            @input_file = RubyXL::Parser.parse(params[:path_to_file]) 
+            @input_file = RubyXL::Parser.parse(open(params[:path_to_file])) 
             @rankmi_sheet=@input_file[1]
             @input_sheet=@input_file[0]
         end
