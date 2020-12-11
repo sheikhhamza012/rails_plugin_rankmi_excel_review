@@ -89,7 +89,7 @@ module RankmiExcelReview
             return false
         end
         #upload
-        def self.upload(stream)
+        def upload(stream)
             s3 = Aws::S3::Resource.new
             key = "#{Time.now.to_i.to_s}.xlsx"
             obj = s3.bucket(ENV['AWS_BUCKET']).object(key)
