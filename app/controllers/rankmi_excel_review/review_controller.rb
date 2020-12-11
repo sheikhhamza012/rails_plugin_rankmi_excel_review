@@ -88,11 +88,19 @@ module RankmiExcelReview
             end
             return false
         end
-
+        #upload
+        def self.upload(stream)
+            s3 = Aws::S3::Resource.new
+            key = "#{Time.now.to_i.to_s}.xlsx"
+            obj = s3.bucket(ENV['AWS_BUCKET']).object(key)
+            # obj.upload_file(file.to_io)
+            obj.put(body: stream)
+            return obj.public_url
+        end
         # post of the edit form is recieved here
         def create
             #create files
-            @input_file = RubyXL::Parser.parse(params[:path_to_file])
+            @input_file = RubyXL::Parser.parse(open(params[:path_to_file]))
             @BBDD_rankmi_file = RubyXL::Workbook.new
             @no_existe_BBDD_file = RubyXL::Workbook.new
 
@@ -328,11 +336,15 @@ module RankmiExcelReview
             print_warning(@input_file[0],0,no_user_col,"usuario nuevo")
             
             #save the files
-            @input_file.write(params[:path_to_file])
-            @BBDD_rankmi_file.write("En BBDD rankmi a agregar.xlsx")
-            @no_existe_BBDD_file.write("No existe en BBDD.xlsx")
+            input_file_url = params[:path_to_file]
+            edited_input_file_url = upload(@input_file.stream)
+            output_BBDD_rankmi_file_url = upload(@BBDD_rankmi_file.stream)
+            output_no_existe_BBDD_file_url = upload(@no_existe_BBDD_file.stream)
+            # @input_file.write(params[:path_to_file])
+            # @BBDD_rankmi_file.write("En BBDD rankmi a agregar.xlsx")
+            # @no_existe_BBDD_file.write("No existe en BBDD.xlsx")
 
-            redirect_to params[:redirect_to]
+            redirect_to params[:redirect_to], :input_file_url=>input_file_url, :edited_input_file_url=>edited_input_file_url, :output_BBDD_rankmi_file_url=>output_BBDD_rankmi_file_url,:no_existe_BBDD_file=>no_existe_BBDD_file
         end
 
         #check which checkbox value should be selected
