@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rspec-rails"
   spec.add_dependency "capybara"
   spec.add_dependency "byebug"
+  spec.add_dependency 'aws-sdk-s3'
 
   spec.add_development_dependency "sqlite3"
 end

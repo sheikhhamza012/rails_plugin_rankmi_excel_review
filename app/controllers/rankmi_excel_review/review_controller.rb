@@ -257,11 +257,13 @@ module RankmiExcelReview
                                 print_warning(@input_file[0],ind,comparison_col,"correo pertenece a otro usuario (#{@input_file[1][duplicate_email][find_col(@input_file[1],"identifier")]&.value})")
                             end
                         end
-                       
-                        curr_row_username = @input_file[0][ind][find_col(@input_file[0],"username")]&.value
-                        duplicate_username = find_row(@input_file[1],"username",curr_row_username,found_row)
-                        if duplicate_username
-                            print_warning(@input_file[0],ind,comparison_col,"usuario pertenece a otro usuario (#{@input_file[1][duplicate_username][find_col(@input_file[1],"identifier")]&.value})")
+                        index_of_username = find_col(@input_file[0],"username")
+                        if index_of_username
+                            curr_row_username = @input_file[0][ind][index_of_username]&.value
+                            duplicate_username = find_row(@input_file[1],"username",curr_row_username,found_row)
+                            if duplicate_username
+                                print_warning(@input_file[0],ind,comparison_col,"usuario pertenece a otro usuario (#{@input_file[1][duplicate_username][find_col(@input_file[1],"identifier")]&.value})")
+                            end
                         end
                     end
 
