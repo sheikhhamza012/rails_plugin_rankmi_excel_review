@@ -249,10 +249,13 @@ module RankmiExcelReview
                         end
 
                         #check if duplicate email or usename exists for other identifier
-                        curr_row_email = @input_file[0][ind][find_col(@input_file[0],"email")]&.value
-                        duplicate_email = find_row(@input_file[1],"email",curr_row_email,found_row)
-                        if duplicate_email
-                            print_warning(@input_file[0],ind,comparison_col,"correo pertenece a otro usuario (#{@input_file[1][duplicate_email][find_col(@input_file[1],"identifier")]&.value})")
+                        index_of_email = find_col(@input_file[0],"email")
+                        if index_of_email
+                            curr_row_email = @input_file[0][ind][index_of_email]&.value
+                            duplicate_email = find_row(@input_file[1],"email",curr_row_email,found_row)
+                            if duplicate_email
+                                print_warning(@input_file[0],ind,comparison_col,"correo pertenece a otro usuario (#{@input_file[1][duplicate_email][find_col(@input_file[1],"identifier")]&.value})")
+                            end
                         end
                        
                         curr_row_username = @input_file[0][ind][find_col(@input_file[0],"username")]&.value
