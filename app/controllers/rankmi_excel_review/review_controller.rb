@@ -119,6 +119,7 @@ module RankmiExcelReview
             
             #for row
             @input_file[0].each_with_index do |row, ind|
+                puts ind.to_s+" :row"
                 i= 0
                 
                 #for cell in row
