@@ -58,7 +58,7 @@ module RankmiExcelReview
             column_index = create_column_and_return_index(file, column_name)
             while i < file.sheet_data.rows.size 
                 break if !column_index
-                if file[i][column_index]&.value&.downcase == value&.downcase && curr_col!=i
+                if file[i][column_index]&.value.to_s&.downcase == value.to_s&.downcase && curr_col!=i
                     found=i
                     break
                 end
